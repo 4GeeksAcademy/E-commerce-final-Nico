@@ -34,6 +34,7 @@ db.init_app(app)
 # add the admin
 setup_admin(app)
 
+
 # add the admin
 setup_commands(app)
 
@@ -49,7 +50,6 @@ def handle_invalid_usage(error):
 
 # generate sitemap with all your endpoints
 
-
 @app.route('/')
 def sitemap():
     if ENV == "development":
@@ -58,7 +58,6 @@ def sitemap():
 
 # any other endpoint will try to serve it like a static file
 
-
 @app.route('/<path:path>', methods=['GET'])
 def serve_any_other_file(path):
     if not os.path.isfile(os.path.join(static_file_dir, path)):
@@ -66,7 +65,6 @@ def serve_any_other_file(path):
     response = send_from_directory(static_file_dir, path)
     response.cache_control.max_age = 0  # avoid cache memory
     return response
-
 
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
