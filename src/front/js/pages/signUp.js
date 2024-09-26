@@ -31,13 +31,12 @@ export const SignUp = () => {
     <h1>Register</h1>
     <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div className="mb-3">
     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required className="form-control" id="exampleInputPassword1"/>
   </div>
-  <button type="submit" className="btn btn-dark">Submit</button>
+  <button type="submit" className="btn btn-dark">Create Account</button>
   <Link to="/">
 				<button className="btn m-2 btn-dark">Back home</button>
 			</Link>

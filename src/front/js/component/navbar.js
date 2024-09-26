@@ -27,7 +27,7 @@ export const Navbar = () => {
 				</svg>
 					<span className="navbar-brand mb-0 h1">Cups n' Mugs</span>
 				</Link>
-				<div d-flex gap-2>
+				<div d-flex="true" gap-2="true">
 					<Link to="/signUp">
 							<button type="button" onClick={signUp} className="btn m-2 btn-dark">Register</button>
 					</Link>
