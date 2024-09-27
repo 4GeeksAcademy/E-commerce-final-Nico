@@ -11,7 +11,6 @@ import PrivateRoute from "./component/privateRoute";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import MainPage from "./component/MainPage";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -26,12 +25,12 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <Routes>
                         <Route element={<Home />} path="/" />
+                        <Route element={<Navbar />} path="/Navbar" />
                         <Route element={<SignUp />} path="/SignUp" />
                         <Route element={<LogIn />} path="/LogIn" />
-                        <Route element={<MainPage />} path="/MainPage" />
                         <Route element={<h1>Not found!</h1>} />
                         <Route element={<PrivateRoute />}>
                             <Route element={<PrivateView />} path="/PrivateView" />

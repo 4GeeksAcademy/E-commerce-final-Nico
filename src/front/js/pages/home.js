@@ -1,12 +1,15 @@
 import React from "react";
 import "../../styles/home.css";
+import Navbar from "../component/navbar";
 
 
 export const Home = () => {
 
 	return (
+		
 	<div className="home">
 		<div className="container">
+		<Navbar />
 			<div className="flex md:flex-row flex-col justify-between py-5">
 				<div className="relative pr-12 sm:pr-24 max-w-[700px]">
 					<h1 className="text-3xl md:text-7xl mb-3">CUPS N' MUGS</h1>
