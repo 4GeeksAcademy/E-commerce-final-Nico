@@ -1,10 +1,12 @@
-import React, { useEffect} from "react";
+import React, { useContext, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
+import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
 export const PrivateView = () => {
     const navigate = useNavigate ();
-
+	const {store, actions} = useContext(Context);
 
 useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -52,8 +54,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>7.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				
@@ -69,8 +74,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>4.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -86,8 +94,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>6.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -102,8 +113,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>10.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -119,8 +133,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>5.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -135,8 +152,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>7.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -151,8 +171,11 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>11.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -163,12 +186,15 @@ return (
 				<div className="card-body">
 					<h5 className="card-title">Kiyomi Mug</h5>
 					<p className="card-text">Introducing the Kiyomi Mug, a tribute to the elegance and tradition of Japanese craftsmanship. 
-						Inspired by timeless Japanese design.</p>
+						Inspired by timeless Japanese design. Hurry so you dont miss out!</p>
 					<div>
 						<p style={{fontSize:'20px'}}><strong>15.99$</strong></p>
 					</div>
-                    <div>
+                    <div className="button-container">
                         <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
@@ -179,12 +205,16 @@ return (
 				<div className="card-body">
 					<h5 className="card-title">Luxe Mug</h5>
 					<p className="card-text">Introducing the Luxe Mug, where elegance meets everyday indulgence. 
-						Crafted with precision, this mug is more than just a vessel—it's a statement..</p>
+						Crafted with precision, this mug is more than just a vessel—it's a statement.. You wouldn'
+						want to miss out!</p>
 					<div>
 						<p style={{fontSize:'20px'}}><strong>10.99$</strong></p>
 					</div>
-                    <div>
-                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    <div className="button-container">
+                        <button type="button" class="btn btn-dark"> Add to Cart</button>
+                        <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></svg>
+						</button>
                     </div>
 				</div>
 				</div>
