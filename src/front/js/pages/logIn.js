@@ -39,9 +39,9 @@ export const LogIn = () => {
     <label  htmlFor="exampleInputPassword1" className="form-label">Password</label>
     <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="form-control" id="exampleInputPassword1"/>
   </div>
-  <button type="submit" className="btn btn-dark">Enter</button>
+  <button type="submit" className="btn btn-dark" style={{fontSize:"10px", padding:"5px 10px"}}>Enter</button>
   <Link to="/">
-	<button className="btn m-2 btn-dark">Back home</button>
+	<button className="btn m-2 btn-dark" style={{fontSize:"10px", padding:"5px 10px"}}>Back home</button>
 </Link>
 </form>
 </div>

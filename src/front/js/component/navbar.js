@@ -29,10 +29,10 @@ export const Navbar = () => {
 				</Link>
 				<div d-flex="true" gap-2="true">
 					<Link to="/signUp">
-							<button type="button" onClick={signUp} className="btn m-2 btn-dark">Register</button>
+							<button type="button" onClick={signUp} className="btn m-2 btn-dark" style={{fontSize:"10px", padding:"5px 10px"}}>Register</button>
 					</Link>
 					<Link to="/logIn">
-							<button type="button" onClick={logIn} className="btn btn-dark">Log In</button>
+							<button type="button" onClick={logIn} className="btn btn-dark" style={{fontSize:"10px", padding:"5px 10px"}}>Log In</button>
 					</Link>
 				</div>
 			</div>
