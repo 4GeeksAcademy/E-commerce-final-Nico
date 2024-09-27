@@ -34,7 +34,7 @@ return (
         </div>
             <div d-flex="true" gap-2="true">
                 <div>     
-                    <button onClick={handleLogOut} className="btn btn-danger" style={{fontSize:"10px", padding:"5px 10px"}}> Log Out </button> 
+                    <button onClick={handleLogOut} className="btn btn-danger" style={{fontSize:"12px", padding:"5px 10px"}}> Log Out </button> 
                 </div>
             </div>
         </nav>
@@ -52,6 +52,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>7.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				
 				</div>
@@ -66,6 +69,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>4.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -80,6 +86,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>6.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -93,6 +102,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>10.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -107,6 +119,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>5.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -120,6 +135,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>7.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -133,6 +151,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>11.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -146,6 +167,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>15.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
@@ -159,6 +183,9 @@ return (
 					<div>
 						<p style={{fontSize:'20px'}}><strong>10.99$</strong></p>
 					</div>
+                    <div>
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                    </div>
 				</div>
 				</div>
 			</div>
