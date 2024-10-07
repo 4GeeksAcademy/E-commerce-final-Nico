@@ -1,4 +1,4 @@
-const products = [
+const Products = [
     {
         id: 0,
         name: "Cozy White Mug",
@@ -20,7 +20,7 @@ const products = [
         name: "Verdant Green Mug",
         price: 6.99,
         instock: 100,
-        description:"Brighten your day with the Verdant Green Mug, a perfect blend of nature-inspired charm and functionality. This beautifully crafted mug showcases a rich green hue",
+        description: "Brighten your day with the Verdant Green Mug, a perfect blend of nature-inspired charm and functionality. This beautifully crafted mug showcases a rich green hue",
         imgSrc: "https://media.istockphoto.com/id/869295342/photo/image-of-coffee-cup-isolated-with-clipping-path.jpg?s=612x612&w=0&k=20&c=AWQmOCfkjecoezwGk-jFSWKEO6xRzBnM_Jkj5LcD0o~",
     },
     {
@@ -48,29 +48,28 @@ const products = [
         imgSrc: "https://media.istockphoto.com/id/1146776554/fr/photo/gros-plan-de-tasse-%C3%A0-vapeur-de-caf%C3%A9-sur-comptoir-de-cuisine-en-d%C3%A9but-de-matin%C3%A9e.jpg?s=612x612&w=0&k=20&c=MwezknFHCfrKL2i8KEv8WZGU8KqSVSmJp9UwrMT3yIs=",
     },
     {
-      id: 6,
-      name: "Cozy Sip Mug",
-      price: 11.99,
-      instock: 100,
-      description: "Introducing the Cozy Sip Mug, designed with your comfort in mind. This mug combines style and functionality to create the ultimate sipping experience.",
-      imgSrc: "https://img.freepik.com/premium-photo/white-coffee-mug-wooden-table-with-words-o-side_1058796-39492.jpg",
+        id: 6,
+        name: "Cozy Sip Mug",
+        price: 11.99,
+        instock: 100,
+        description: "Introducing the Cozy Sip Mug, designed with your comfort in mind. This mug combines style and functionality to create the ultimate sipping experience.",
+        imgSrc: "https://img.freepik.com/premium-photo/white-coffee-mug-wooden-table-with-words-o-side_1058796-39492.jpg",
     },
     {
-    id: 7,
-    name: "Kiyomi Mug",
-    price: 15.99,
-    instock: 100,
-    description: "Introducing the Kiyomi Mug, a tribute to the elegance and tradition of Japanese craftsmanship. Inspired by timeless Japanese design.",
-    imgSrc: "https://www.shutterstock.com/image-photo/yellow-ceramic-mug-isolated-on-600nw-2224244583.jpg",
+        id: 7,
+        name: "Kiyomi Mug",
+        price: 15.99,
+        instock: 100,
+        description: "Introducing the Kiyomi Mug, a tribute to the elegance and tradition of Japanese craftsmanship. Inspired by timeless Japanese design.",
+        imgSrc: "https://www.shutterstock.com/image-photo/yellow-ceramic-mug-isolated-on-600nw-2224244583.jpg",
     },
     {
-  id: 8,
-  name: "Luxe Mug",
-  price: 10.99,
-  instock: 100,
-  description: "Introducing the Luxe Mug, where elegance meets everyday indulgence. Crafted with precision, this mug is more than just a vessel—it's a statement..",
-  imgSrc: "https://parkstreetbooks.com/cdn/shop/files/C40004_20_02_G_001_829x828_jpg_829x.webp?v=1701032167",
+        id: 8,
+        name: "Luxe Mug",
+        price: 10.99,
+        instock: 100,
+        description: "Introducing the Luxe Mug, where elegance meets everyday indulgence. Crafted with precision, this mug is more than just a vessel—it's a statement..",
+        imgSrc: "https://parkstreetbooks.com/cdn/shop/files/C40004_20_02_G_001_829x828_jpg_829x.webp?v=1701032167",
     },
 
-  ];
-  
+];
