@@ -21,136 +21,177 @@ export const PrivateView = () => {
 		navigate('/LogIn');
 	};
 
-	const productsEl = document.querySelector(".products");
-	const cartItemsEl = document.querySelector(".cart-items");
-	const subtotalEl = document.querySelector(".subtotal");
-	const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+	// const productsEl = document.querySelector(".products");
+	// const cartItemsEl = document.querySelector(".cart-items");
+	// const subtotalEl = document.querySelector(".subtotal");
+	// const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 
-	//Render Mugs
+	// const productsArray = [
+	// 	{
+	// 		id: 0, name: 'Cozy White Mug', price: 7.99, imgSrc: "https://media.istockphoto.com/id/1414016924/photo/white-mockup-mug-with-copy-space-and-houseplant-at-the-background.jpg?s=612x612&w=0&k=20&c=2CCGUMWlr3yJrHGtYAo1ZDPChVfoWRZtAmD9qhwjPko=",
+	// 		description: "Experience the ultimate in comfort and style with the Cozy White Mug! This beautifully designed mug embodies simplicity and elegance, making it a perfect addition to any kitchen or office",
 
-	function renderProducts() {
-		renderProducts.forEach((product) => {
-			productsEl.innerHTML += `
-            	<div class="item">
-                <div class="item-container">
-                    <div class="item-img">
-                        <img src="${product.imgSrc}" alt="${product.name}">
-                    </div>
-                    <div class="desc">
-                        <h2>${product.name}</h2>
-                        <h2><small>$</small>${product.price}</h2>
-                        <p>
-                            ${product.description}
-                        </p>
-                    </div>
-                    <div class="add-to-cart" onclick="addToCart(${product.id})">
-                        <img src="./icons/bag-plus.png" alt="add to cart">
-                    </div>
-                </div>
-            </div>
-        `;
-		});
-	}
-	renderProducts();
+	// 	},
+	// 	{
+	// 		id: 1, name: 'Crimson Red Mug', price: 4.99, imgSrc: "https://media.istockphoto.com/id/171368204/photo/red-cup.jpg?s=612x612&w=0&k=20&c=q0CQtZJAGs8VXm2B7462QDJ0tlk18h1EPApvvZNgBus=",
+	// 		description: "Ignite your passion for great coffee and tea with the Crimson Red Mug! This vibrant mug is more than just a drinkware piece—it's a bold statement. Hurry and dont miss out on this oportunity!",
+	// 	},
+	// 	{
+	// 		id: 2, name: 'Verdant Green Mug', price: 6.99, imgSrc: "https://media.istockphoto.com/id/869295342/photo/image-of-coffee-cup-isolated-with-clipping-path.jpg?s=612x612&w=0&k=20&c=AWQmOCfkjecoezwGk-jFSWKEO6xRzBnM_Jkj5LcD0o~",
+	// 		description: "Brighten your day with the Verdant Green Mug, a perfect blend of nature-inspired charm and functionality. This beautifully crafted mug showcases a rich green hue",
+	// 	},
+	// 	{
+	// 		id: 3, name: 'Cream Elegance Mug', price: 10.99, imgSrc: "https://img.freepik.com/premium-photo/color-burst-chaos-coffee-mug-mockup-brand-merchandise_901408-7480.jpg",
+	// 		description: "Introducing the Cream Elegance Mug, a timeless piece that embodies sophistication and warmth. This beautifully crafted mug features a soft cream color that complements any decor.",
+	// 	},
+	// 	{
+	// 		id: 4, name: 'Blush Pink Mug', price: 5.99, imgSrc: "https://media.istockphoto.com/id/617374430/photo/pink-ceramic-cup-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=TBBMp_4y1_K10vTn2Uv81RjA7I43sZv4Z3pxtb9Xq0A=",
+	// 		description: "Elevate your sipping experience with the charming Blush Pink Mug! This delightful mug is a perfect blend of style and functionality, designed to bring a touch of elegance to your daily routine",
+	// 	},
+	// 	{
+	// 		id: 5, name: 'Sunset Orange Mug', price: 7.99, imgSrc: "https://media.istockphoto.com/id/1146776554/fr/photo/gros-plan-de-tasse-%C3%A0-vapeur-de-caf%C3%A9-sur-comptoir-de-cuisine-en-d%C3%A9but-de-matin%C3%A9e.jpg?s=612x612&w=0&k=20&c=MwezknFHCfrKL2i8KEv8WZGU8KqSVSmJp9UwrMT3yIs=",
+	// 		description: "Brighten up your day with the Sunset Orange Mug! This vibrant mug is designed to add a pop of color to your morning routine or afternoon break. Hurry and dont miss this oportunity.",
+	// 	},
+	// 	{
+	// 		id: 6, name: 'Cozy Sip Mug', price: 11.99, imgSrc: "https://img.freepik.com/premium-photo/white-coffee-mug-wooden-table-with-words-o-side_1058796-39492.jpg",
+	// 		description: "Introducing the Cozy Sip Mug, designed with your comfort in mind. This mug combines style and functionality to create the ultimate sipping experience.",
+	// 	},
+	// 	{
+	// 		id: 7, name: 'Kiyomi Mug', price: 15.99, imgSrc: "https://www.shutterstock.com/image-photo/yellow-ceramic-mug-isolated-on-600nw-2224244583.jpg",
+	// 		description: "Introducing the Kiyomi Mug, a tribute to the elegance and tradition of Japanese craftsmanship. Inspired by timeless Japanese design.",
+	// 	},
+	// 	{
+	// 		id: 8, name: 'Luxe Mug', price: 10.99, imgSrc: "https://parkstreetbooks.com/cdn/shop/files/C40004_20_02_G_001_829x828_jpg_829x.webp?v=1701032167",
+	// 		description: "Introducing the Luxe Mug, where elegance meets everyday indulgence. Crafted with precision, this mug is more than just a vessel—it's a statement..",
+	// 	},
+	// ];
 
-	//Cart Array
+	// //Render Mugs
 
-	let cart = JSON.parse(localStorage.getItem("CART")) || [];
-	updateCart();
+	// function displayProducts(products) {
+	// 	productsEl.innerHTML = '';
+	// 	products.forEach((product) => {
+	// 		productsEl.innerHTML += `
+	// 			<div class="item">
+	// 				<div class="item-container">
+	// 					<div class="item-img">
+	// 						<img src="${product.imgSrc}" alt="${product.name}">
+	// 					</div>
+	// 					<div class="desc">
+	// 						<h2>${product.name}</h2>
+	// 						<h2><small>$</small>${product.price}</h2>
+	// 						<p>
+	// 							${product.description}
+	// 						</p>
+	// 					</div>
+	// 					<div class="add-to-cart" onclick="addToCart(${product.id})">
+	// 						<img src="./icons/bag-plus.png" alt="add to cart">
+	// 					</div>
+	// 				</div>
+	// 			</div>
+	// 		`;
+	// 	});
+	// }
+	// displayProducts(productsArray);
 
-	// Add to Cart
+	// //Cart Array
 
-	function addToCart(id) {
-		if (cart.some((item) => item.id === id)) {
-			changeNumberOfUnits("plus", id);
-		} else {
-			const item = products.find((product) => product.id === id);
-			cart.push({
-				...item,
-				numberOfUnits: 1,
-			});
-		}
-		updateCart();
-	}
+	// let cart = JSON.parse(localStorage.getItem("CART")) || [];
+	// updateCart();
 
-	// Update Cart
+	// // Add to Cart
 
-	function updateCart() {
-		renderCartItems();
-		renderSubtotal();
+	// function addToCart(id) {
+	// 	if (cart.some((item) => item.id === id)) {
+	// 		changeNumberOfUnits("plus", id);
+	// 	} else {
+	// 		const item = products.find((product) => product.id === id);
+	// 		cart.push({
+	// 			...item,
+	// 			numberOfUnits: 1,
+	// 		});
+	// 	}
+	// 	updateCart();
+	// }
 
-		localStorage.setItem("CART", JSON.stringify(cart));
-	}
+	// // Update Cart
 
-	//Calculate and render Subtotal
+	// function updateCart() {
+	// 	renderCartItems();
+	// 	renderSubtotal();
 
-	function renderSubtotal() {
-		let totalPrice = 0,
-			totalItems = 0;
+	// 	localStorage.setItem("CART", JSON.stringify(cart));
+	// }
 
-		cart.forEach((item) => {
-			totalPrice += item.price * item.numberOfUnits;
-			totalItems += item.numberOfUnits;
-		});
+	// //Calculate and render Subtotal
 
-		subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}`;
-		totalItemsInCartEl.innerHTML = totalItems;
-	}
+	// function renderSubtotal() {
+	// 	let totalPrice = 0,
+	// 		totalItems = 0;
 
-	// Render Cart Items
+	// 	cart.forEach((item) => {
+	// 		totalPrice += item.price * item.numberOfUnits;
+	// 		totalItems += item.numberOfUnits;
+	// 	});
 
-	function renderCartItems() {
-		cartItemsEl.innerHTML = "";
-		cart.forEach((item) => {
-			cartItemsEl.innerHTML += `
-        <div class="cart-item">
-            <div class="item-info" onclick="removeItemFromCart(${item.id})">
-                <img src="${item.imgSrc}" alt="${item.name}">
-                <h4>${item.name}</h4>
-            </div>
-            <div class="unit-price">
-                <small>$</small>${item.price}
-            </div>
-            <div class="units">
-                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
-                <div class="number">${item.numberOfUnits}</div>
-                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
-            </div>
-        </div>
-      `;
-		});
-	}
+	// 	subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}`;
+	// 	totalItemsInCartEl.innerHTML = totalItems;
+	// }
 
-	// Remove item from Cart
+	// // Render Cart Items
 
-	function removeItemFromCart(id) {
-		cart = cart.filter((item) => item.id !== id);
+	// function renderCartItems() {
+	// 	cartItemsEl.innerHTML = ""; // clear cart element
+	// 	cart.forEach((item) => {
+	// 		cartItemsEl.innerHTML += `
+	// 		  <div class="cart-item">
+	// 			  <div class="item-info" onclick="removeItemFromCart(${item.id})">
+	// 				  <img src="${item.imgSrc}" alt="${item.name}">
+	// 				  <h4>${item.name}</h4>
+	// 			  </div>
+	// 			  <div class="unit-price">
+	// 				  <small>$</small>${item.price}
+	// 			  </div>
+	// 			  <div class="units">
+	// 				  <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+	// 				  <div class="number">${item.numberOfUnits}</div>
+	// 				  <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
+	// 			  </div>
+	// 		  </div>
+	// 		`;
+	// 	});
+	// }
 
-		updateCart();
-	}
+	// // Remove item from Cart
 
-	// Change number of units for an item
+	// function removeItemFromCart(id) {
+	// 	cart = cart.filter((item) => item.id !== id);
 
-	function changeNumberOfUnits(action, id) {
-		cart = cart.map((item) => {
-			let numberOfUnits = item.numberOfUnits;
+	// 	updateCart();
+	// }
 
-			if (item.id === id) {
-				if (action === "minus" && numberOfUnits > 1) {
-					numberOfUnits--;
-				} else if (action === "plus" && numberOfUnits < item.instock) {
-					numberOfUnits++;
-				}
-			}
+	// // Change number of units for an item
 
-			return {
-				...item,
-				numberOfUnits,
-			};
-		});
+	// function changeNumberOfUnits(action, id) {
+	// 	cart = cart.map((item) => {
+	// 		let numberOfUnits = item.numberOfUnits;
 
-		updateCart();
-	}
+	// 		if (item.id === id) {
+	// 			if (action === "minus" && numberOfUnits > 1) {
+	// 				numberOfUnits--;
+	// 			} else if (action === "plus" && numberOfUnits < item.instock) {
+	// 				numberOfUnits++;
+	// 			}
+	// 		}
+
+	// 		return {
+	// 			...item,
+	// 			numberOfUnits,
+	// 		};
+	// 	});
+
+	// 	updateCart();
+	// }
 
 	return (
 		<div className="container">
