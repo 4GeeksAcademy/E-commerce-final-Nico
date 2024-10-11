@@ -421,12 +421,6 @@ export const PrivateView = () => {
 												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 											</div>
 
-
-											<div class="alert alert-danger p-2 g-col-6" role="alert">
-												Some fields are missing
-											</div>
-
-
 											<div class="modal-body">
 												<form class="row g-3">
 													<div class="col-md-4">
