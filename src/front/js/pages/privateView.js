@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
@@ -7,6 +7,7 @@ import "../../styles/home.css";
 export const PrivateView = () => {
 	const navigate = useNavigate();
 	const { store, actions } = useContext(Context);
+	const [showModal, setShowModal] = useState(false)
 
 	useEffect(() => {
 		const token = sessionStorage.getItem('token');
@@ -20,6 +21,11 @@ export const PrivateView = () => {
 
 		navigate('/LogIn');
 	};
+
+	const handleShowModal = () => {
+		setShowModal(true);
+	};
+
 
 	// const productsEl = document.querySelector(".products");
 	// const cartItemsEl = document.querySelector(".cart-items");
@@ -193,6 +199,7 @@ export const PrivateView = () => {
 	// 	updateCart();
 	// }
 
+
 	return (
 		<div className="container">
 			<nav className="navbar">
@@ -234,7 +241,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>7.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -253,7 +260,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>4.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -273,7 +280,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>6.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -292,7 +299,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>10.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -312,7 +319,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>5.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -331,7 +338,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>7.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -350,7 +357,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>11.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -369,7 +376,7 @@ export const PrivateView = () => {
 									<p style={{ fontSize: '20px' }}><strong>15.99$</strong></p>
 								</div>
 								<div className="button-container">
-									<button type="button" class="btn btn-dark">Add to Cart</button>
+									<button type="button" className="btn btn-dark">Add to Cart</button>
 								</div>
 							</div>
 						</div>
@@ -390,28 +397,112 @@ export const PrivateView = () => {
 								</div>
 
 								<div className="button-container">
-									<button type="button" class="btn btn-dark"> Add to Cart</button>
+									<button type="button" className="btn btn-dark"> Add to Cart</button>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div className="cart" style={{ flex: "1", maxWidth: "400px", border: "1px solid #ddd", padding: "20px", marginLeft: "20px", alignSelf: "flex-start" }}>
-						{/* <div className="cart-header">
-					<div className="column1"><strong>Item</strong>
-					</div>
-					<div className="column2"><strong>Unit price</strong>
-					</div>
-					<div className="column3"><strong>Units</strong>
-					</div>
-					</div> */}
 
 						<div className="cart-items">
 							{/* Render cart items here */}
 						</div>
+
 						<div className="cart-footer">
 							<div className="subtotal">Subtotal (0 items): $0</div>
 							<div className="checkout">
-								<button type="button" className="btn btn-dark">Proceed to checkout</button>
+								<button onClick={handleShowModal} type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Proceed to checkout</button>
+
+								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-xl">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h1 class="modal-title fs-5" id="exampleModalLabel">Complete to finish purchase</h1>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+
+
+											<div class="alert alert-danger p-2 g-col-6" role="alert">
+												Some fields are missing
+											</div>
+
+
+											<div class="modal-body">
+												<form class="row g-3">
+													<div class="col-md-4">
+														<label for="inputcard" class="form-label">Card #</label>
+														<input type="card" class="form-control" id="inputcard" placeholder="XXXXXXXXXXXXXXX" />
+													</div>
+													<div class="col-md-4">
+														<label for="inputcvc" class="form-label">CVC #</label>
+														<input type="cvc" class="form-control" id="inputcvc" placeholder="0000" />
+													</div>
+													<div class="col-md-6">
+														<label for="inputname" class="form-label">First Name</label>
+														<input type="name" class="form-control" id="inputname" />
+													</div>
+													<div class="col-md-6">
+														<label for="inputlast" class="form-label">Last Name</label>
+														<input type="last" class="form-control" id="inputlast" />
+													</div>
+													<div class="col-md-6">
+														<label for="inputCity" class="form-label">City</label>
+														<input type="city" class="form-control" id="inputCity" />
+													</div>
+													<div class="col-md-4">
+														<label for="inputState" class="form-label">State</label>
+														<select id="inputState" class="form-select">
+															<option selected>Choose...</option>
+															<option>Hawaii</option>
+															<option>Florida</option>
+															<option>Illinois</option>
+															<option>Idaho</option>
+															<option>Michigan</option>
+														</select>
+													</div>
+													<div class="col-md-2">
+														<label for="inputZip" class="form-label">Postal Code</label>
+														<input type="zip" class="form-control" id="inputZip" />
+													</div>
+
+													<strong><p>We Accept:</p></strong>
+
+													<div class="cards">
+
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+															<label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2" />
+															<label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option3" />
+															<label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club"></i></label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option4" />
+															<label class="form-check-label" for="inlineRadio4"><i class="fa-brands fa-cc-amex"></i></label>
+														</div>
+
+													</div>
+
+													<div class="mb-3">
+														<label for="exampleFormControlTextarea1" class="form-label">Message</label>
+														<textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+													</div>
+
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+														<button class="btn btn-dark" type="submit">Pay</button>
+													</div>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
